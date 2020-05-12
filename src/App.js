@@ -43,12 +43,7 @@ function App() {
       >
         <YAxis axisLine={false} tickLine={false} />
         <XAxis axisLine={false} tickLine={false}></XAxis>
-        <Bar dataKey="uv" fill="#8884d8" background={{ fill: "#eee" }} />
-        <Bar
-          dataKey="uv"
-          fill="#82ca9d"
-          shape={renderShape}
-        />
+        <Bar dataKey="uv" fill="#8884d8" background={{ fill: "#eee", radius: 14 }} radius={14} />
       </BarChart>
       <RadialBarChart
         width={400}
@@ -82,27 +77,5 @@ function App() {
   );
 }
 
-function renderShape(props) {
-  return (
-    <React.Fragment>
-      <rect
-        x={props.background.x}
-        y={props.background.y}
-        width={props.background.width}
-        height={props.background.height}
-        rx="14"
-        fill="#eee"
-      ></rect>
-      <rect
-        x={props.x}
-        y={props.y}
-        width={props.width}
-        height={props.height}
-        rx="14"
-        fill="#82ca9d"
-      ></rect>
-    </React.Fragment>
-  );
-}
 
 export default App;
