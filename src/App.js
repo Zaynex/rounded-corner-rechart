@@ -67,7 +67,7 @@ function App() {
           tick={false}
           axisLine={false}
         />
-        <RadialBar background dataKey="value" fill="#82ca9d"  strokeLinecap="round"/>
+        <RadialBar background dataKey="value" fill="#82ca9d" cornerRadius={10}/>
         <text
           x={200}
           y={200}
